@@ -37,7 +37,7 @@ sidebar = html.Div(
 
 def resources_remains():
     return html.Table(
-        [html.Tr(html.Th('Oxygen', 'Fuel'))]
+        [html.Tr(html.Th('Ресурс', 'Остаток'))]
     )
 content = html.Div(id="page-content", style=CONTENT_STYLE)
 
