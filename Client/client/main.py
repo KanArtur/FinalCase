@@ -1,6 +1,6 @@
 import dash_bootstrap_components as dbc
 from dash import Input, Output, dcc, html
-from services import config, application as app, shared_context as ctx
+from services import config, application as app, values
 
 
 SIDEBAR_STYLE = {

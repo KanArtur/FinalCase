@@ -8,15 +8,19 @@ class Value:
 
 
 class Speed:
-    def __init__(self):
-        global weight, power, max_power, gn
+    def __init__(self, power, max_power, gn):
         self.speed = 2 * (200 / (192 + gn)) * (((power / max_power) * 100) / 80)
+
+    def speed_setter(self, power, max_power, gn):
+        speed = Speed(power, max_power, gn)
 
 
 class Ratio:
-    def __init__(self):
-        global temp, oxi
+    def __init__(self, temp, oxi):
         self.ratio = sin((-pi / 2) + (pi * (temp + (0.5 * oxi))) / 40)
+
+    def ratio_setter(self, temp, oxi):
+        ratio = Ratio(temp, oxi)
 
 
 class Population:
@@ -26,7 +30,10 @@ class Population:
 
 
 class Electricity:
-    def __init__(self):
+    def __init__(self, temp):
         self.electricity = 0
         for i in range(temp + 1):
             self.electricity += i
+
+    def electricity_setter(self, temp):
+        electricity = Electricity(temp)
