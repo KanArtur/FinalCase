@@ -35,6 +35,10 @@ sidebar = html.Div(
     style=SIDEBAR_STYLE,
 )
 
+def resources_remains():
+    return html.Table(
+        [html.Tr(html.Th('Oxygen', 'Fuel'))]
+    )
 content = html.Div(id="page-content", style=CONTENT_STYLE)
 
 app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
