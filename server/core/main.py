@@ -28,7 +28,4 @@ def read_config():
     return config
 
 
-r = requests.get('https://dt.miet.ru/ppo_it_final', data={'key': '3uf6s2ym'}
-
-@app.route("/")
-def
+r = requests.get('https://dt.miet.ru/ppo_it_final', data={'key': '3uf6s2ym'})
