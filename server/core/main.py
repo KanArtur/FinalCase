@@ -25,3 +25,6 @@ def read_config():
         with open(cfg_file, "w") as fp:
             json.dump(DEFAULT_CONFIG, fp)
     return config
+
+@app.route("/")
+def
