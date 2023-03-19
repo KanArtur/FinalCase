@@ -1,6 +1,7 @@
 from flask import Flask
 import os
 import json
+import requests
 
 
 app = Flask("server")
@@ -25,6 +26,9 @@ def read_config():
         with open(cfg_file, "w") as fp:
             json.dump(DEFAULT_CONFIG, fp)
     return config
+
+
+r = requests.get('https://dt.miet.ru/ppo_it_final', data={'key': '3uf6s2ym'}
 
 @app.route("/")
 def
